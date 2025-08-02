@@ -1,39 +1,41 @@
-# Define the V.C.T.M. Canteen Menu
-menu = {
-    'Tea': 10,
-    'Coffee': 20,
-    'Pizza': 49,
-    'Maggi': 50,
-    'Burger': 35,
-    'Samosa': 15,
-    'Bread Pakoda': 20,
-    'Momoj': 40,
-}
+# 🥘 V.C.T.M. Canteen Menu App (Python CLI)
 
-# Greet
-print("Welcome to V.C.T.M. Canteen")
-print("Menu:")
-for item, price in menu.items():
-    print(f" {item}: Rs{price}")
+A simple command-line application in Python that simulates a canteen ordering system. Users can view the menu, place multiple orders, and receive a bill summary.
 
-order_total = 0
-order_items = []
+---
 
-while True:
-    item = input("Enter the item you want to order: ").strip().title()
-    if item in menu:
-        order_total += menu[item]
-        order_items.append(item)
-        print(f"{item} added to your order.")
-    else:
-        print(f"{item} is not available in the menu.")
+## 📋 Features
 
-    another_order = input("Do you want to order another item? (Yes/No): ").strip().lower()
-    if another_order != "yes":
-        break
+- Displays a menu with prices
+- Allows users to place multiple item orders
+- Calculates and displays the total bill
+- Simple, interactive CLI-based interface
 
-# Print Bill
-print("\nOrder Summary:")
-for ordered_item in order_items:
-    print(f"- {ordered_item}: Rs{menu[ordered_item]}")
-print(f"Total Amount to Pay: Rs {order_total}")
+---
+
+## 🧾 Menu Items
+
+| Item          | Price (Rs) |
+|---------------|------------|
+| Tea           | 10         |
+| Coffee        | 20         |
+| Pizza         | 49         |
+| Maggi         | 50         |
+| Burger        | 35         |
+| Samosa        | 15         |
+| Bread Pakoda  | 20         |
+| Momoj         | 40         |
+
+---
+
+## 🖥️ How to Run
+
+### ✅ Prerequisites:
+- Python 3 installed. [Download Python](https://www.python.org/downloads/)
+
+### ▶️ Steps:
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Sumit631802/canteen-menu.git
+   cd canteen-menu
